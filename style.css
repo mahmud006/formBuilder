@@ -1,0 +1,506 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url(https://cdn.forms.office.net/forms/images/aio/wave-pattern-v1.svg)
+      center top / cover no-repeat,
+    linear-gradient(
+      90deg,
+      rgba(3, 120, 124, 0.2) 0%,
+      rgba(3, 120, 124, 0.8) 100%
+    );
+
+  /* background: linear-gradient(to bottom right, #00ffff, #ff00ff); */
+}
+
+/* form container, heading, des */
+.form-container {
+  max-width: 800px;
+  min-height: 550px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.header h1 {
+  margin-bottom: 15px;
+}
+.header p {
+  margin-bottom: 10px;
+}
+.header input {
+  width: 730px;
+  border-radius: 0.5%;
+}
+.header {
+  /* background: #dfdfdf; */
+  padding: 10px 10px;
+}
+.header:hover {
+  background: #dfdfdf;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  display: block;
+  width: 500px;
+  height: 30px;
+  padding: 5px;
+  /* margin: 15px; */
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:hover {
+  border-bottom-color: #19544f;
+}
+
+/* question part */
+#add-question {
+  padding: 10px;
+  background-color: #03787c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  padding-top: 13px;
+  /* margin: 50px 10px; */
+}
+/* #add-question.btn-large {
+  font-size: 20px; 
+  padding: 10px 24px; 
+} */
+#add-question:hover {
+  background-color: #3e4347;
+}
+#add-question span {
+  position: relative;
+  /* background-color: red; */
+  left: 0;
+  bottom: 23%;
+  padding-right: 5px;
+
+  /* top: 20%; */
+  /* transform: translateY(-50%); */
+  /* font-size: 24px; */
+}
+
+/* choice button */
+.choices-container {
+  display: none;
+}
+.choices-container.show {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px;
+  border-radius: 4px;
+  background: #03787c;
+  width: 450px;
+  margin-left: 38px;
+  /* margin-top: 1px; */
+  height: 40px;
+}
+.choice-btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 20px;
+}
+.choice-btn span {
+  position: relative;
+  /* background: red; */
+  /* top: 2%; */
+  bottom: 18%;
+  padding-right: 5px;
+  font-size: 20px;
+  /* color: #03787c; */
+}
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 15px;
+}
+/* 
+ */
+/*  */
+
+/* 1. radio button */
+.mcqQuestion {
+  padding: 20px;
+  margin-top: 0px;
+  /* border: 1px solid #ccc; */
+  /* border-radius: 5px; */
+}
+.mcqQuestion:hover {
+  background: #dfdfdf;
+}
+.question-text {
+  margin-bottom: 10px;
+}
+
+.options {
+  /* display: flex; */
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type='radio'] {
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+span {
+  font-size: 16px;
+}
+
+/*  */
+/* questions  */
+.formMcq,
+.editForm {
+  background: #dfdfdf;
+  margin-top: 20px;
+  border-top: 4px solid #03787c;
+  border-radius: 4px;
+  display: none;
+}
+.formMcq.show,
+.editForm.show {
+  display: block;
+}
+.question {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.option input[type='radio'] {
+  margin-right: 10px;
+  position: relative;
+}
+.option span,
+.question span {
+  position: absolute;
+  background: #ffffff;
+  left: 490px;
+  font-size: 24px;
+}
+
+.mcqQuestion .question {
+  display: flex;
+  justify-content: space-between;
+}
+.mcqQuestion .question h4 {
+  padding: 5px 8px;
+}
+.question span {
+  margin-top: 4px;
+  left: 470px;
+}
+/* add option */
+.optionBtn {
+  padding: 10px;
+  /* background-color: #03787c; */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  padding-top: 13px;
+  color: #03787c;
+  background: #dfdfdf;
+}
+.optionBtn span {
+  position: relative;
+  /* background-color: red; */
+  left: 0;
+  bottom: 23%;
+  padding-right: 2px;
+
+  /* top: 20%; */
+  /* transform: translateY(-50%); */
+  /* font-size: 24px; */
+}
+
+/* option div */
+.optionDiv {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+/* functionality btn */
+.functionalityBtns {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+}
+.fnBtn {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  background: #dfdfdf;
+}
+.fnBtn span {
+  margin-right: 10px;
+  font-size: 50px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.fnBtn p {
+  padding-top: 15px;
+}
+
+/* top Icons */
+.topIcons {
+  display: flex;
+  justify-content: end;
+}
+.topIcons span {
+  margin-right: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+/* question input */
+.mcqQuestion #question-input {
+  width: 700px;
+}
+.mcqQuestion .question span {
+  position: absolute;
+  background: #ffffff;
+  left: 662px;
+  font-size: 24px;
+}
+
+/* display question */
+.formMcqDisplay {
+  margin-top: 30px;
+  padding: 10px;
+  margin: 0;
+}
+.formMcqDisplay:hover {
+  background: #dfdfdf;
+}
+/* .formMcqDisplay #question {
+  margin-bottom: 10px;
+} */
+.formMcqDisplay #answers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin: 0 0 0 15px; */
+}
+.formMcqDisplay #answers label {
+  padding: 12px;
+  margin: 0;
+}
+.formMcqDisplay.none {
+  display: none;
+}
+/* 2. text form */
+.formText {
+  display: none;
+  margin-top: 20px;
+  background: #dfdfdf;
+  border-top: 4px solid #03787c;
+  border-radius: 4px;
+}
+.formText.show {
+  display: block;
+}
+/* display text question */
+.formTextDisplay {
+  padding: 10px;
+  margin-top: 20px;
+  /* display: none; */
+}
+.formTextDisplay.none {
+  display: none;
+}
+.formTextDisplay:hover {
+  background: #dfdfdf;
+}
+.formTextDisplay input {
+  margin: 10px 10px;
+  background: rgb(245, 245, 245);
+  width: 98%;
+  min-height: 5vh;
+  outline: none;
+  border-radius: 0px;
+}
+/* 3. rating form */
+.formRating {
+  display: none;
+  margin-top: 20px;
+  background: #dfdfdf;
+  border-top: 4px solid #03787c;
+  border-radius: 4px;
+}
+.formRating.show {
+  display: block;
+}
+
+.starRating {
+  margin-left: 10px;
+}
+.stars span {
+  font-size: 50px;
+  opacity: 0.2;
+}
+.function {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.function .levels {
+  display: flex;
+  /* margin-right: 25px; */
+  /* width: 150px; */
+  justify-content: space-between;
+  background-color: transparent;
+}
+.function .symbol {
+  display: flex;
+  /* width: 150px; */
+  margin-left: 100px;
+}
+/* .function .symbol select span {
+  font-size: 1px;
+} */
+.function label {
+  margin-right: 10px;
+  margin-top: 8px;
+}
+.function select {
+  display: block;
+  height: 5.5vh;
+  width: 25vh;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  background-color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+.function option:selected {
+  font-size: 5px;
+}
+/* .function .levels:hover {
+  background-color: transparent;
+} */
+.function select:hover {
+  border-bottom: 2px solid #03787c;
+}
+/* display rating question */
+.formRatingDisplay {
+  padding: 10px;
+  margin-top: 20px;
+  /* display: none; */
+}
+.formRatingDisplay.none {
+  display: none;
+}
+.formRatingDisplay:hover {
+  background: #dfdfdf;
+}
+.formRatingDisplay .stars {
+  padding: 15px 0;
+}
+.formRatingDisplay .stars span {
+  font-size: 30px;
+  opacity: 0.65;
+}
+/* 4. date form */
+.formDate {
+  display: none;
+  margin-top: 20px;
+  background: #dfdfdf;
+  border-top: 4px solid #03787c;
+  border-radius: 4px;
+}
+.formDate.show {
+  display: block;
+}
+.formDate .answer input {
+  border: 1px solid #a2a4a5;
+}
+.formDate .answer span {
+  color: #3e4347;
+}
+.formDate .answer {
+  opacity: 0.4;
+}
+/* date display */
+.formDateDisplay {
+  margin-top: 20px;
+  padding: 10px;
+  /* display: none; */
+}
+.formDateDisplay.none {
+  display: none;
+}
+.formDateDisplay:hover {
+  background: #dfdfdf;
+}
+.formDateDisplay input {
+  margin: 10px 10px;
+  background: rgb(245, 245, 245);
+  width: 98%;
+  min-height: 5vh;
+  outline: none;
+  border-radius: 0px;
+}
+.formDateDisplay .answers {
+  position: relative;
+  padding: 10px 0;
+}
+.formDateDisplay .answers span {
+  color: #3e4347;
+  position: absolute;
+  background: rgb(245, 245, 245);
+  right: 15px;
+  font-size: 24px;
+  top: 26px;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- form container -->
+    <div class="form-container">
+      <div class="header">
+        <h1 class="formHeader">Form</h1>
+        <p class="formDes"></p>
+      </div>
+
+      <!-- questions -->
+      <div class="questions"></div>
+      <!-- 1. mcq form -->
+      <div class="formMcq"></div>
+
+      <!-- 2. form text -->
+      <div class="formText"></div>
+      <!-- 2.1 display text question -->
+      <!-- <div class="formTextDisplay">
+        <div id="question">What is the capital of France?</div>
+        <div id="answers">
+          <input
+            type="text"
+            name="answer"
+            placeholder="Enter your answer"
+            disabled
+          />
+        </div>
+      </div> -->
+      <!-- 3. rating form -->
+      <div class="formRating"></div>
+      <!-- 3.1 display rating -->
+      <!-- <div class="formRatingDisplay">
+        <div id="question">What is the capital of France?</div>
+        <div class="stars">
+          <span class="material-symbols-rounded"> star </span>
+          <span class="material-symbols-rounded"> star </span>
+          <span class="material-symbols-rounded"> star </span>
+          <span class="material-symbols-rounded"> star </span>
+          <span class="material-symbols-rounded"> star </span>
+        </div>
+      </div> -->
+      <!-- 4. date form -->
+      <div class="formDate">
+        <div class="topIcons">
+          <span class="material-symbols-outlined"> content_copy </span>
+          <span class="material-symbols-outlined"> delete </span>
+          <span class="material-symbols-outlined"> arrow_downward </span>
+          <span class="material-symbols-outlined"> arrow_upward </span>
+        </div>
+        <div class="mcqQuestion">
+          <div class="question">
+            <!-- <h3>Question:</h3> -->
+            <input
+              type="text"
+              id="question-input"
+              placeholder="Input your question title here..."
+              value="Question"
+            />
+            <span class="material-symbols-sharp"> add_photo_alternate </span>
+          </div>
+          <div class="question answer">
+            <!-- <h3>Question:</h3> -->
+            <input
+              type="text"
+              id="question-input"
+              placeholder="Please input date (M/d/yyyy)"
+              value=""
+              readonly
+            />
+            <span class="material-symbols-outlined"> calendar_month </span>
+          </div>
+          <!-- <hr /> -->
+
+          <hr />
+          <div class="functionalityBtns">
+            <div class="fnBtn">
+              <span class="material-symbols-outlined"> toggle_off </span>
+              <p>Required</p>
+            </div>
+            <div class="fnBtn">
+              <span class="material-symbols-outlined"> more_horiz </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 4.1 date rating -->
+      <!-- <div class="formDateDisplay">
+        <div id="question">What is the capital of France?</div>
+        <div class="answers">
+          <input
+            type="text"
+            name="answer"
+            placeholder="Please input date (M/d/yyyy)"
+            disabled
+          />
+          <span class="material-symbols-outlined"> calendar_month </span>
+        </div>
+      </div> -->
+
+      <!-- btn container -->
+
+      <div class="btnContainer">
+        <div class="add-btn">
+          <button id="add-question">
+            <span class="material-symbols-sharp span"> add </span>
+            <p>Add new</p>
+          </button>
+        </div>
+        <div class="choices-container">
+          <button class="choice-btn" id="choice-btn-mcq" data-choice="mcq">
+            <span class="material-symbols-sharp"> radio_button_checked </span>
+            Choice
+          </button>
+          <button class="choice-btn" id="choice-btn-text" data-choice="text">
+            <span class="material-symbols-sharp"> title </span>
+            Text
+          </button>
+          <button
+            class="choice-btn"
+            id="choice-btn-rating"
+            data-choice="rating"
+          >
+            <span class="material-symbols-sharp"> thumb_up </span>
+            Rating
+          </button>
+          <button class="choice-btn" id="choice-btn-date" data-choice="date">
+            <span class="material-symbols-sharp"> calendar_month </span>
+            Date
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
