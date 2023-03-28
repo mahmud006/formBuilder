@@ -7,10 +7,10 @@
 body {
   font-family: Arial, sans-serif;
   background: url(https://cdn.forms.office.net/forms/images/aio/wave-pattern-v1.svg)
-      center top / cover no-repeat,
+      center top / cover no-repeat fixed,
     linear-gradient(
       90deg,
-      rgba(3, 120, 124, 0.2) 0%,
+      rgba(3, 120, 124, 0.2) -20%,
       rgba(3, 120, 124, 0.8) 100%
     );
 
@@ -29,9 +29,12 @@ body {
 
 .header h1 {
   margin-bottom: 15px;
+  padding: 7px 0px;
 }
 .header p {
   margin-bottom: 10px;
+  padding: 7px 0px;
+  font-size: small;
 }
 .header input {
   width: 730px;
@@ -39,10 +42,43 @@ body {
 }
 .header {
   /* background: #dfdfdf; */
-  padding: 10px 10px;
+  padding: 25px 15px;
 }
 .header:hover {
   background: #dfdfdf;
+}
+/* navbar */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  z-index: 5;
+  align-items: center;
+  padding-left: 56px;
+  background: rgb(250, 250, 250);
+}
+#preview {
+  padding: 0px 10px;
+  margin-right: 0px;
+  background: transparent;
+  border: 0px;
+  height: 44px;
+  font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif, Roboto;
+  color: rgb(66, 66, 66);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-right: 320px;
+}
+#preview span {
+  padding-right: 8px;
+  padding-top: 4px;
+}
+#preview p {
+  padding: 0px;
 }
 form {
   display: flex;
@@ -504,3 +540,138 @@ span {
   font-size: 24px;
   top: 26px;
 }
+
+/* drag & drop question */
+.item {
+  cursor: move;
+}
+
+/* dragggggggggggggg */
+/* Import Google font - Poppins */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} */
+/* body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #595DB8;
+} */
+/* .sortable-list {
+  width: 425px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 30px 25px 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+} */
+/* .sortable-list .item {
+  list-style: none;
+  display: flex;
+  cursor: move;
+  background: #fff;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 13px;
+  margin-bottom: 11px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  border: 1px solid #ccc;
+  justify-content: space-between;
+} */
+/* .item .details {
+  display: flex;
+  align-items: center;
+}
+.item .details img {
+  height: 43px;
+  width: 43px;
+  pointer-events: none;
+  margin-right: 12px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.item .details span {
+  font-size: 1.13rem;
+}
+.item i {
+  color: #474747;
+  font-size: 1.13rem;
+} */
+/* .item.dragging {
+  opacity: 0.6;
+}
+.item.dragging :where(.details, i) {
+  opacity: 0;
+} */
+
+/* dragggg */
+/* .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: move;
+}
+
+.drag-handle {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  margin-right: 10px;
+  cursor: move;
+}
+
+.content {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.content:hover {
+  background-color: #f5f5f5;
+}
+
+.number {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.item:hover .drag-handle,
+.dragging .drag-handle {
+  background-color: #aaa;
+}
+
+.item.dragging {
+  background-color: #f5f5f5;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item.dragging .drag-handle {
+  background-color: #ccc;
+}
+
+.item.dragging .content {
+  opacity: 0.5;
+}
+
+.item.placeholder {
+  visibility: hidden;
+  height: 0;
+}
+
+.item.placeholder .content {
+  border: none;
+  box-shadow: none;
+  opacity: 0;
+} */

@@ -28,8 +28,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js"></script> -->
   </head>
   <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <button id="preview">
+        <span class="material-symbols-outlined"> visibility </span>
+        <p>Preview</p>
+      </button>
+    </nav>
     <!-- form container -->
     <div class="form-container">
       <div class="header">
@@ -41,94 +49,20 @@
       <div class="questions"></div>
       <!-- 1. mcq form -->
       <div class="formMcq"></div>
-
+      <!-- 1.1 display mcq -->
       <!-- 2. form text -->
       <div class="formText"></div>
       <!-- 2.1 display text question -->
-      <!-- <div class="formTextDisplay">
-        <div id="question">What is the capital of France?</div>
-        <div id="answers">
-          <input
-            type="text"
-            name="answer"
-            placeholder="Enter your answer"
-            disabled
-          />
-        </div>
-      </div> -->
+
       <!-- 3. rating form -->
       <div class="formRating"></div>
       <!-- 3.1 display rating -->
-      <!-- <div class="formRatingDisplay">
-        <div id="question">What is the capital of France?</div>
-        <div class="stars">
-          <span class="material-symbols-rounded"> star </span>
-          <span class="material-symbols-rounded"> star </span>
-          <span class="material-symbols-rounded"> star </span>
-          <span class="material-symbols-rounded"> star </span>
-          <span class="material-symbols-rounded"> star </span>
-        </div>
-      </div> -->
-      <!-- 4. date form -->
-      <div class="formDate">
-        <div class="topIcons">
-          <span class="material-symbols-outlined"> content_copy </span>
-          <span class="material-symbols-outlined"> delete </span>
-          <span class="material-symbols-outlined"> arrow_downward </span>
-          <span class="material-symbols-outlined"> arrow_upward </span>
-        </div>
-        <div class="mcqQuestion">
-          <div class="question">
-            <!-- <h3>Question:</h3> -->
-            <input
-              type="text"
-              id="question-input"
-              placeholder="Input your question title here..."
-              value="Question"
-            />
-            <span class="material-symbols-sharp"> add_photo_alternate </span>
-          </div>
-          <div class="question answer">
-            <!-- <h3>Question:</h3> -->
-            <input
-              type="text"
-              id="question-input"
-              placeholder="Please input date (M/d/yyyy)"
-              value=""
-              readonly
-            />
-            <span class="material-symbols-outlined"> calendar_month </span>
-          </div>
-          <!-- <hr /> -->
 
-          <hr />
-          <div class="functionalityBtns">
-            <div class="fnBtn">
-              <span class="material-symbols-outlined"> toggle_off </span>
-              <p>Required</p>
-            </div>
-            <div class="fnBtn">
-              <span class="material-symbols-outlined"> more_horiz </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 4.1 date rating -->
-      <!-- <div class="formDateDisplay">
-        <div id="question">What is the capital of France?</div>
-        <div class="answers">
-          <input
-            type="text"
-            name="answer"
-            placeholder="Please input date (M/d/yyyy)"
-            disabled
-          />
-          <span class="material-symbols-outlined"> calendar_month </span>
-        </div>
-      </div> -->
+      <!-- 4. date form -->
+      <div class="formDate"></div>
+      <!-- 4.1 display date -->
 
       <!-- btn container -->
-
       <div class="btnContainer">
         <div class="add-btn">
           <button id="add-question">
